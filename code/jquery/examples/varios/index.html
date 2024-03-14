@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1</title>
+</head>
+<body>
+    
+    <p>
+        <a href="https://www.google.com/?hl=es">Ir a Google</a>
+    </p>
+    
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").click(function (evento) {
+                alert("Has pulsado el enlace...\nAhora serás enviado a google.com");
+            });
+        });
+    </script>
+</body>
+</html>
