@@ -1,0 +1,130 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />-->
+<title>elementos basicos</title>
+<link href="jquery.mobile-1.3.1.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.3.1.min.js" type="text/javascript"></script>
+	<script>
+			/*
+			vamos a obtener la dimension de la pantalla
+			*/
+			var meta = document.createElement("meta"); //creamos un elemento tipo meta 
+			meta.setAttribute('name','viewport'); // le asignaremos el atributo name con la propiedad viewport
+			meta.setAttribute('content','initial-scale='+ (1/window.devicePixelRatio) + ',user-scalable=no'); 
+			/*
+			a nuestro elemento meta le asignamos el atributo content con los atributos initial-scale donde tomaremos el ratio de 
+			la pantalla del dispositivo para que nuestra aplicacion no se "deforme" 
+			al igual que agregamos user-scalable=no para que el usuario no pueda hacer "zoom in" a nuestra app
+			*/
+			document.getElementsByTagName('head')[0].appendChild(meta);
+		</script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+
+	<div data-role="header" data-theme="a" class="ui-header">
+		<h1>Pagina uno</h1>
+	</div>
+    
+	<div data-role="content" data-theme="a" class="ui-content">
+	  
+      <ul data-role="listview" id="milista"></ul>
+      <br>
+      <div data-role="button" onClick="despliega()">despliega</div>
+      
+  	</div>
+    
+	<div data-role="footer" data-theme="a" data-position="fixed">
+		 <div data-role="navbar">
+    		<ul>
+    
+    			<li><a href="#pagina0" class="ui-btn-active">Pagina 1</a></li>
+        		<li><a href="#pagina1">Pagina 2</a></li>
+        		<li><a href="#pagina2">Pagina 3</a></li>
+    
+    		</ul>
+    	</div>
+	</div>
+</div>
+
+
+<div data-role="page" id="pagina0">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">Pagina 0</div>
+  
+  <div data-role="footer" class="ui-footer-fixed">
+  <div data-role="navbar">
+    		<ul>
+    
+    			<li><a href="#pagina0">Pagina 1</a></li>
+        		<li><a href="#pagina1">Pagina 2</a></li>
+        		<li><a href="#pagina2">Pagina 3</a></li>
+    
+    		</ul>
+    	</div>
+  </div>
+</div>
+
+<div data-role="page" id="pagina1">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">Pagina 1</div>
+  <div data-role="footer" class="ui-footer-fixed">
+    <div data-role="navbar">
+    		<ul>
+    
+    			<li><a href="#pagina0">Pagina 1</a></li>
+        		<li><a href="#pagina1">Pagina 2</a></li>
+        		<li><a href="#pagina2">Pagina 3</a></li>
+    
+    		</ul>
+    	</div>
+  </div>
+</div>
+
+<div data-role="page" id="pagina2">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">Pagina 2</div>
+  <div data-role="footer" class="ui-footer-fixed">
+    <div data-role="navbar">
+    		<ul>
+    
+    			<li><a href="#pagina0">Pagina 1</a></li>
+        		<li><a href="#pagina1">Pagina 2</a></li>
+        		<li><a href="#pagina2">Pagina 3</a></li>
+    
+    		</ul>
+    	</div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+function despliega( ){
+	var elemento=new Array();
+	for(i=0;i<3;i++){
+	elemento[i]="fila "+i;
+	}
+ $("#milista").listview();
+ for (var i=0;i<3;i++){
+	 $("#milista").append(' <li><a href="#pagina'+i+'">'+elemento[i]+'</a></li>');
+	 }
+ //$("#milista").append(' <li><a href="#modif">'+elemento[0]+'</a></li> <li><a href="#modif">'+elemento[1]+'</a></li> <li><a href="#modif">'+elemento[2]+'</li></a>');
+ $("#milista").listview('refresh');
+ /*$("#milista").append(' <li><a href="#modif"><h3>10/09/2011</h3><p><b>Alta: </b>120 <b>Baja: </b>090</p></a></li><li><a href="#modif"><h3>08/09/2011</h3><p><b>Alta: </b>133 <b>Baja: </b>077</p></li></a><li><a href="#modif"><h3>05/09/2011</h3><p><b>Alta: </b>110 <b>Baja: </b>065</p> </li></a>');
+ $("#milista").listview('refresh');*/
+ }
+ 
+
+</script>
+</body>
+</html>
