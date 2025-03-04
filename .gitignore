@@ -1,3 +1,6 @@
 # ignore python_modules
 code/flask/project_0/venv
 code/flask/project_0/__pycache__
+
+# directorio temporal
+tmp/
