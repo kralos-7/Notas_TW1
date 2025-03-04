@@ -1,0 +1,35 @@
+.selected{
+    background-color: black;
+    color:red;
+}
+.inselected{
+    background-color: #088A68;
+    color:#EDEFEE;
+}
+
+#caja{
+    height: 125px;
+    width: 200px;
+    border: 1px solid red;
+    background: purple; 
+}
+
+.cls3 {
+    color: black;
+    background-color: lime;
+}
+
+.clas4{
+    color: lime;
+    background-color: black;
+}
+
+.clas5{
+    color: yellow;
+    background-color: black;
+}
+
+.cls6{
+    color: gray;
+    background-color: brown;
+}
