@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-icons.css">
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center p-3">
+        <h1>Mi Página Web Semántica</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Inicio</a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section id="about" class="mb-4">
+            <h2>Sobre mí</h2>
+            <p>Soy un desarrollador web apasionado por crear experiencias digitales efectivas.</p>
+        </section>
+
+        <section id="portfolio" class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-4">
+                <article class="card">
+                    <img src="images/proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyecto 1</h5>
+                        <p class="card-text">Descripción del proyecto 1.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-4">
+                <article class="card">
+                    <img src="images/proyecto2.jpg" class="card-img-top" alt="Proyecto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyecto 2</h5>
+                        <p class="card-text">Descripción del proyecto 2.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2025 - Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

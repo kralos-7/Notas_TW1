@@ -1,0 +1,33 @@
+/mi-proyecto
+├── /assets
+│   ├── /css
+│   │   ├── main.css
+│   │   ├── responsive.css
+│   │   └── custom.css
+│   │
+│   ├── /js
+│   │   ├── main.js
+│   │   ├── navbar.js
+│   │   └── form-validation.js
+│   │
+│   ├── /img
+│   │   ├── logo.png
+│   │   └── banner.jpg
+│   │
+│   ├── /fonts
+│   │   └── custom-font.woff2
+│
+├── /pages
+│   ├── index.html
+│   ├── about.html
+│   ├── contact.html
+│   └── services.html
+│
+├── /vendor
+│   ├── /bootstrap
+│   ├── /jquery
+│   └── /fontawesome
+│
+├── .gitignore
+├── README.md
+└── LICENSE
