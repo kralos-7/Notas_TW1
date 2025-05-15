@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 
 // Página principal
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { title: 'WEB-APP'});
 });
 
 // Ruta simulada tipo API
